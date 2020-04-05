@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'StoresController@index');
+
+//Route::resource('books', 'BooksController', ['only' => ['index']]);
+Route::resource('stores', 'StoresController', ['only' => ['index', 'show']]);
