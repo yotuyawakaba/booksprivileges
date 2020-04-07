@@ -13,7 +13,6 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "5.5.*",
         "nesk/puphpeteer": "^1.6",
-        "qxsch/worker-pool": "^1.6",
         "scotteh/php-dom-wrapper": "^1.2",
         "weidner/goutte": "^1.4"
     },

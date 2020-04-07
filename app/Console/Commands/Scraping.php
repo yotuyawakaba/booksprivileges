@@ -42,10 +42,19 @@ class Scraping extends Command
      */
     public function handle()
     {
+        $date_Y_M = date("Y-m-01");
+        $current_date = date("Y-m-d");
+        $url = 'https://www.melonbooks.co.jp/privilege/privilege.php?genre=&chara=&week=&type=&date_before=2020-04-07&date_after=2020-04-14&category=4&sort_type=&orderby=&disp_number=1000&pageno=1&picker_date_before='.$date_Y_M.'&picker_date_after='.$current_date;
+        dd($url);
+        $crawlerMeron = GoutteFacade::request('GET', $url);
+        
+        
         $crawler = GoutteFacade::request('GET', 'https://www.mangaoh.co.jp/catalog/product_list4.php?i_date=2020-03-01&i_category=b');
         $store = Store::first();
         $arraytable=array();
         $arraybooks=array();
+        
+/*マンガ王スクレイピング処理*/
 $crawler->filter("table.table")->each(function ($nodetable) use (&$arraytable){
   $arraytr=array();
   $nodetable->filter("tr")->each(function ($nodetr) use (&$arraytr){
