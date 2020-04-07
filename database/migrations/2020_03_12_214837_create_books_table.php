@@ -24,7 +24,7 @@ class CreateBooksTable extends Migration
             $table->timestamps();
         });
         
-        $table->foreign('store_id')->references('id')->on('sotre');
+        $table->foreign('store_id')->references('id')->on('stores');
     }
 
     /**
