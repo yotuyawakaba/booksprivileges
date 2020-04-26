@@ -64,7 +64,7 @@ class Scraping extends Command
                 $melon_arraytabletr[] = $melon_arraytabletd;
             });
             $melon_arraytable[] = $melon_arraytabletr;
-            sleep(2);
+            
         });
         foreach ($melon_arraytable as $key_melon_test => $calender_melon_test) {
             foreach ($calender_melon_test as $key_melon_test2 => $calender_melon_test2) {
