@@ -16,6 +16,7 @@
 //});
 
 Route::get('/', 'StoresController@index');
+Route::get('scraping', 'StoresController@scraping')->name('stores.scraping');
 
 //Route::resource('books', 'BooksController', ['only' => ['index']]);
 Route::resource('stores', 'StoresController', ['only' => ['index', 'show']]);

@@ -16,6 +16,7 @@
                             </div>
                         </li></h2>
                     @endforeach
+                    <p>{!! link_to_route('stores.scraping', '更新', [], ['class' => 'btn btn-primary']) !!}</p>
                 </ul>
                 @endif
             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Store;
 use App\Book;
+use App\Console\Commands\Scraping;
 
 class StoresController extends Controller
 {
@@ -29,5 +30,12 @@ class StoresController extends Controller
             ];
 
         return view('stores.show', $data);
+    }
+    
+    public function scraping() {
+        $scraping = new Scraping;
+        $scraping->handle();
+        
+        return back();
     }
 }
