@@ -22,9 +22,11 @@ class CreateBooksTable extends Migration
             $table->string('privilege_url');
             $table->string('show_url');
             $table->timestamps();
+            
+            $table->foreign('store_id')->references('id')->on('stores');
         });
         
-        $table->foreign('store_id')->references('id')->on('stores');
+        
     }
 
     /**
