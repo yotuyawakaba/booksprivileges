@@ -52,7 +52,7 @@ class Mangaoh {
                         //$len：置換文字の長さを取得
                         $len = strlen("/下");
                         $date = substr_replace($date, '', $pos, $len);
-                        $date = $date . "-01";
+                        $date = $date . "/01";
                         
                         $datefull = date("Y/" . "$date");
 
