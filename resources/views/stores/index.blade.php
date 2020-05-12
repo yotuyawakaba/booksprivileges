@@ -16,7 +16,9 @@
                             </div>
                         </li></h2>
                     @endforeach
-                    <p>{!! link_to_route('stores.scraping', '更新', [], ['class' => 'btn btn-primary']) !!}</p>
+                    <p>{!! link_to_route('stores.mangaoh_scraping', 'まんが王特典更新', [], ['class' => 'btn btn-primary']) !!}</p>
+                    <p>{!! link_to_route('stores.melonbooks_scraping', 'メロンブックス特典更新', [], ['class' => 'btn btn-primary']) !!}</p>
+                    <p>{!! link_to_route('stores.publisher_delete', '特典削除', [], ['class' => 'btn btn-danger']) !!}</p>
                 </ul>
                 @endif
             </div>
